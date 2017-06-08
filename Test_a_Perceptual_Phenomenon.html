@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-1:-Identify-variables-in-the-experiment">Question 1: Identify variables in the experiment<a class="anchor-link" href="#Question-1:-Identify-variables-in-the-experiment">&#182;</a></h3><p>Independant variable = Word condition</p>
+<h3 id="Question-1:-What-is-our-independent-variable?-What-is-our-dependent-variable?">Question 1: What is our independent variable? What is our dependent variable?<a class="anchor-link" href="#Question-1:-What-is-our-independent-variable?-What-is-our-dependent-variable?">&#182;</a></h3><p>Independant variable = Word condition</p>
 <p>Dependant variable = Response time in seconds</p>
 
 </div>
@@ -11794,9 +11794,18 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-2:-Establish-a-hypothesis-and-statistical-test">Question 2: Establish a hypothesis and statistical test<a class="anchor-link" href="#Question-2:-Establish-a-hypothesis-and-statistical-test">&#182;</a></h3><p>Null hypothesis (H₀) = There is no significant difference in the population average response times between the congruent and incongruent tasks.</p>
-<p>Alternative hypothesis (Hₐ) = There is a significant difference, either positive or negative, in the population average response times between the congruent and incongruent tasks.</p>
-<p>The appropriate statistical test to use is the <strong>dependent t-test</strong> as the possible difference between the congruent and incongruent words condition's response times in the sample can be either positive or negative. Furthermore, the test is dependent as the same sample of subjects are doing both, the congruent and incongruent tasks, and no population parameters are provided. This test will provide evidence to support or deny the null hypothesis.</p>
+<h3 id="Question-2:-What-is-an-appropriate-set-of-hypotheses-for-this-task?-What-kind-of-statistical-test-do-you-expect-to-perform?-Justify-your-choices.">Question 2: What is an appropriate set of hypotheses for this task? What kind of statistical test do you expect to perform? Justify your choices.<a class="anchor-link" href="#Question-2:-What-is-an-appropriate-set-of-hypotheses-for-this-task?-What-kind-of-statistical-test-do-you-expect-to-perform?-Justify-your-choices.">&#182;</a></h3><p>The null hypothesis should be that the mean time for colour recognition for congruent words is equal to or greater than the mean time for incongruent words, therefore implying a one-tailed test. The alternative hypothesis should be that the congruent words mean is less than the incongruent words mean.</p>
+<p>H0: μC ≥ μI</p>
+<p>HA: μC &lt; μI</p>
+<p>where μ is a population mean, the subscript "C" represents the congruent words condition, and the subscript "I" represents the incongruent words condition.</p>
+<p>A one-tailed, dependent samples t-test comparing the difference in means (the time to name the ink colors for congruent words and incongruent words) should be performed. With this test, we seek to determine whether there is enough evidence in the provided sample of data to infer that the congruent words mean colour recognition time is less than the incongruent words mean colour recognition time for the entire population and not just the sample data.</p>
+<p>A t-test is appropriate because the population variance is unknown and the sample size is less than 30. When the sample size is less than 30, the sample data no longer approximate a normal distribution, which makes the use of a Z-value inappropriate.1 The following assumptions are required for t-tests for dependent means:2</p>
+<p>Interval or ratio scale of measurement (approximately interval)
+Random sampling from a defined population
+Samples or sets of data used to produce the difference scores are linked in the population through repeated measurement, natural association, or matching
+Scores are normally distributed in the population; difference scores are normally distributed
+A one-tailed test is appropriate under the assumption that incongruent word conditions will not improve recognition times, which is intuitive. The one-tailed test allows for a more scrutinous examination of the negative impact of incongruent word conditions on recognition times.</p>
+<p>The t-test should be of the dependent samples variety because the same subject is exposed to two conditions and tested for each, which are the defining criteria for "within-subjects" or "repeated-measures" statistical tests</p>
 
 </div>
 </div>
@@ -11806,13 +11815,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-3:-Report-descriptive-statistics">Question 3: Report descriptive statistics<a class="anchor-link" href="#Question-3:-Report-descriptive-statistics">&#182;</a></h3>
+<h3 id="Question-3:-Report-some-descriptive-statistics-regarding-this-dataset.-Include-at-least-one-measure-of-central-tendency-and-at-least-one-measure-of-variability.">Question 3: Report some descriptive statistics regarding this dataset. Include at least one measure of central tendency and at least one measure of variability.<a class="anchor-link" href="#Question-3:-Report-some-descriptive-statistics-regarding-this-dataset.-Include-at-least-one-measure-of-central-tendency-and-at-least-one-measure-of-variability.">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -11832,7 +11841,7 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -11902,13 +11911,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-4:-Plot-the-data">Question 4: Plot the data<a class="anchor-link" href="#Question-4:-Plot-the-data">&#182;</a></h3>
+<h3 id="Question-4:-Provide-one-or-two-visualizations-that-show-the-distribution-of-the-sample-data.-Write-one-or-two-sentences-noting-what-you-observe-about-the-plot-or-plots.">Question 4: Provide one or two visualizations that show the distribution of the sample data. Write one or two sentences noting what you observe about the plot or plots.<a class="anchor-link" href="#Question-4:-Provide-one-or-two-visualizations-that-show-the-distribution-of-the-sample-data.-Write-one-or-two-sentences-noting-what-you-observe-about-the-plot-or-plots.">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -12150,7 +12159,7 @@ mRlOBmZmhpOBmZnhZGBmZjgZmJkZ8P8Aoaio8ueVwN4AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">incongruent_y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
@@ -12410,7 +12419,7 @@ RHMdJPnmNQAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-5:-Perform-the-statistical-test-and-interpret-your-results">Question 5: Perform the statistical test and interpret your results<a class="anchor-link" href="#Question-5:-Perform-the-statistical-test-and-interpret-your-results">&#182;</a></h3>
+<h3 id="Question-5:-Now,-perform-the-statistical-test-and-report-your-results.-What-is-your-confidence-level-and-your-critical-statistic-value?-Do-you-reject-the-null-hypothesis-or-fail-to-reject-it?-Come-to-a-conclusion-in-terms-of-the-experiment-task.-Did-the-results-match-up-with-your-expectations?">Question 5: Now, perform the statistical test and report your results. What is your confidence level and your critical statistic value? Do you reject the null hypothesis or fail to reject it? Come to a conclusion in terms of the experiment task. Did the results match up with your expectations?<a class="anchor-link" href="#Question-5:-Now,-perform-the-statistical-test-and-report-your-results.-What-is-your-confidence-level-and-your-critical-statistic-value?-Do-you-reject-the-null-hypothesis-or-fail-to-reject-it?-Come-to-a-conclusion-in-terms-of-the-experiment-task.-Did-the-results-match-up-with-your-expectations?">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12420,16 +12429,16 @@ RHMdJPnmNQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code>confidence level = 95%
-degrees of freedom = 25 - 1 = 24
-t critical = +/- 2.064</code></pre>
+<pre><code>α = .01
+df = 23
+tcrit = -2.50</code></pre>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
@@ -12446,7 +12455,7 @@ t critical = +/- 2.064</code></pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -12465,7 +12474,8 @@ t critical = +/- 2.064</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>With a t-value of -8.02 that is less than the t-critical of -2.064, and a p-value of much less than 0.0001, the null hypothesis is rejected with a 95% confidence. There is evidence to support the hypothesis that response times are significantly different between congruent and incongruent tasks with the latter taking longer than the former. This finding matches my expectations as I observed myself taking comparitively longer on the incongruent tasks.</p>
+<p>At the 99% confidence level (α = .01) and 23 degrees of freedom, the critical statistic value for a one-tailed test in the negative direction is -2.5. The calculated t-statistic for the difference in colour recognition time means of the congruent and incongruent word data is -8.02. Since the t-statistic is in the critical region, the null hypothesis is rejected. With the data presented, it is very unlikely that the 7.96 second difference in mean time for colour recognition for the congruent data vs. the incongruent data is obtained if the two means are actually the same (or if μC &gt; μI). By conventional criteria, this difference is considered to be extremely statistically significant.</p>
+<p>There is sufficient evidence at the α = .01 level of significance to support the claim that it takes less time to recognize the colour of words with the congruent condition compared to words with the incongruent condition.</p>
 
 </div>
 </div>
@@ -12475,7 +12485,7 @@ t critical = +/- 2.064</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-6:-Digging-deeper-and-extending-the-investigation">Question 6: Digging deeper and extending the investigation<a class="anchor-link" href="#Question-6:-Digging-deeper-and-extending-the-investigation">&#182;</a></h3>
+<h3 id="Question-6:-Optional:-What-do-you-think-is-responsible-for-the-effects-observed?-Can-you-think-of-an-alternative-or-similar-task-that-would-result-in-a-similar-effect?-Some-research-about-the-problem-will-be-helpful-for-thinking-about-these-two-questions!">Question 6: Optional: What do you think is responsible for the effects observed? Can you think of an alternative or similar task that would result in a similar effect? Some research about the problem will be helpful for thinking about these two questions!<a class="anchor-link" href="#Question-6:-Optional:-What-do-you-think-is-responsible-for-the-effects-observed?-Can-you-think-of-an-alternative-or-similar-task-that-would-result-in-a-similar-effect?-Some-research-about-the-problem-will-be-helpful-for-thinking-about-these-two-questions!">&#182;</a></h3>
 </div>
 </div>
 </div>
